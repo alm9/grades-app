@@ -68,7 +68,11 @@ const update = async (req, res) => {
     });
   }
 
-  const id = req.params.id;
+  let id = req.params.id;
+
+  if (id === 'undefined') {
+    id = req.body._id; //o front-end envia string 'undefined'
+  }
 
   try {
     const data = await Grade.findByIdAndUpdate({ _id: id }, req.body);
