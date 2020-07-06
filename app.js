@@ -27,8 +27,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
   cors({
-    // origin: 'http://localhost:3000', //localmente
-    origin: 'https://afternoon-falls-53800.herokuapp.com/',
+    // origin: 'http://localhost:3000',
+    origin: 'https://afternoon-falls-53800.herokuapp.com',
   })
 );
 
